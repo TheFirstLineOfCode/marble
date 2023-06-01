@@ -8,9 +8,9 @@
 	
 	<repositories>
 		<repository>
-                        <id>com.thefirstlineofcode.public</id>
-                        <name>TheFirstLineOfCode Repository - Public</name>
-                        <url>http://120.25.166.188/repository/maven-public/</url>
+                        <id>com.thefirstlineofcode.releases</id>
+                        <name>TheFirstLineOfCode Repository - Releases</name>
+                        <url>http://120.25.166.188:9090/repository/maven-releases/</url>
                 </repository>
 		<repository>
                         <id>jcenter</id>
@@ -56,6 +56,15 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
 				<version>2.10</version>
 				<configuration>
@@ -67,9 +76,9 @@
 
 	<distributionManagement>
                 <repository>
-                        <id>com.thefirstlineofcode.public</id>
-                        <name>TheFirstLineOfCode Repository - Public</name>
-                        <url>http://120.25.166.188/repository/maven-public/</url>
+                        <id>com.thefirstlineofcode.releases</id>
+                        <name>TheFirstLineOfCode Repository - Releases</name>
+                        <url>http://120.25.166.188:9090/repository/maven-releases/</url>
                 </repository>
         </distributionManagement>
 </project>
